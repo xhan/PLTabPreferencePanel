@@ -9,19 +9,34 @@
 #import <Cocoa/Cocoa.h>
 
 
+@protocol PLTabPreferenceDelegate;
+
 @interface PLTabPreferenceControl : NSWindowController<NSToolbarDelegate> {
 @private
     
-    IBOutlet NSToolbar *toolbar;
-
-    //preference panel views
-    
-    IBOutlet NSView *firstPanel;
-    
-    IBOutlet NSView *secondPanel;
-    IBOutlet NSView *thirdPanel;
-    
-    NSArray* prefViews;
+    NSToolbar *toolbar;
+    NSArray* prefIdentifyAry;
+    id<PLTabPreferenceDelegate> delegate;
 }
+
+@property(nonatomic,assign) IBOutlet id<PLTabPreferenceDelegate> delegate;
+
+- (void)selectPanelAtIndex:(int)index;
+
+
+@end
+
+
+@protocol PLTabPreferenceDelegate <NSObject>
+
+@required
+
+- (int)countOfPreferencePanels;
+- (NSString*)titleForPreferencePanelAt:(int)index;
+- (NSImage*)imageForPreferencePanelAt:(int)index;
+- (NSView*)panelViewForPreferencePanelAt:(int)index;
+
+@optional
+- (NSString*)identifyForPreferencePanelAt:(int)index;
 
 @end

@@ -6,11 +6,16 @@
 //  Copyright 2011 Baidu.com. All rights reserved.
 //
 
+
 #import "PLTabPreferenceControl.h"
 
 
-@implementation PLTabPreferenceControl
+@interface PLTabPreferenceControl(Private)
+- (void)switchPanel:(id)sender;
+@end
 
+@implementation PLTabPreferenceControl
+@synthesize delegate;
 - (id)initWithWindow:(NSWindow *)window
 {
     self = [super initWithWindow:window];
@@ -39,15 +44,28 @@
 - (void)awakeFromNib{
 //    NSLog(@"awaked");
     
+    NSWindow* theWin = [self window];
+    [theWin setShowsToolbarButton:NO];
+    [theWin setShowsResizeIndicator:NO];
+    
+    
+    
+    toolbar = [[NSToolbar alloc] initWithIdentifier:NSStringFromClass([self class])];
+    [toolbar setShowsBaselineSeparator:NO];
+    [toolbar setAllowsUserCustomization:NO];
     [toolbar setDelegate:self];
-    prefViews = [[NSArray alloc] initWithObjects:firstPanel,secondPanel,thirdPanel, nil];
+    [[self window] setToolbar:toolbar];
+    
+//    [toolbar validateVisibleItems];
+    
+    [self selectPanelAtIndex:0];
 }
 
 /////////////////////////////////////////////
 #pragma TabPreference methods
 - (void)switchPanel:(id)sender
 {
-    NSView *viewToShow = [prefViews objectAtIndex:[sender tag]];
+    NSView *viewToShow = [delegate panelViewForPreferencePanelAt:(int)[sender tag]];
 	NSWindow* theWin = [self window];
     
 	if (viewToShow && ([theWin contentView] != viewToShow)) {
@@ -65,16 +83,41 @@
         
 		[theWin setTitle:[sender label]];
 		
-//		[ud setInteger:[sender tag] forKey:kUDKeySelectedPrefView];
 	}
 }
 
+- (void)selectPanelAtIndex:(int)index
+{
+   NSToolbarItem* item = [[toolbar items] objectAtIndex:index];
+    if (item) {
+        [self switchPanel:item];
+    }
+}
 
 /////////////////////////////////////////////
 #pragma toolbar delegates
 - (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar
 {
-	return [NSArray arrayWithObjects:@"1",@"2",@"3",nil];
+    if (prefIdentifyAry) {
+        return prefIdentifyAry;
+    }
+    if (self.delegate) {
+        int count = [self.delegate countOfPreferencePanels];
+        NSMutableArray* array = [NSMutableArray arrayWithCapacity:count];
+        for (int i = 0; i< count; i++) {
+            NSString* identify;
+            if ([delegate respondsToSelector:@selector(identifyForPreferencePanelAt:)]) {
+                identify = [delegate identifyForPreferencePanelAt:i];
+            }else{
+                identify = [NSString stringWithFormat:@"%d",i];
+            }
+            [array addObject:identify];
+        }
+        [prefIdentifyAry release];
+        prefIdentifyAry = [[NSArray alloc] initWithArray:array];
+        return prefIdentifyAry;
+    }
+    return nil;
 }
 
 - (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar *)atoolbar
@@ -88,30 +131,18 @@
 
 - (NSToolbarItem *)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag
 {
-	NSToolbarItem *item = nil;
-	
-	if ([itemIdentifier isEqualToString:@"1"]) {
-		item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item setLabel:@"1"];
-		[item setImage:[NSImage imageNamed:NSImageNamePreferencesGeneral]];
-		[item setTag:0];
-		
-	} else if ([itemIdentifier isEqualToString:@"2"]) {
-		item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item setLabel:@"2"];
-		[item setImage:[NSImage imageNamed:NSImageNameEveryone]];
-		[item setTag:1];
-		
-	} else if ([itemIdentifier isEqualToString:@"3"]) {
-		item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
-		[item setLabel:@"3"];
-		[item setImage:[NSImage imageNamed:NSImageNameMobileMe]];
-		[item setTag:2];
-		
-	} else {
-		return nil;
-	}
+
+    NSUInteger index = [prefIdentifyAry indexOfObject:itemIdentifier];
+    if (index == NSNotFound) {
+        return nil;
+    }
+    NSToolbarItem *item = nil;
     
+    item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
+    [item setLabel:[delegate titleForPreferencePanelAt:(int)index]];
+    [item setImage:[delegate imageForPreferencePanelAt:(int)index]];
+    [item setTag:index];
+		
 	[item setTarget:self];
 	[item setAction:@selector(switchPanel:)];
 	[item setAutovalidates:NO];

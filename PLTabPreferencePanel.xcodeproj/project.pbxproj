@@ -14,6 +14,8 @@
 		8C4E19691339D11C006291AA /* PLTabPreferencePanelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E19681339D11C006291AA /* PLTabPreferencePanelAppDelegate.m */; };
 		8C4E196C1339D11C006291AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C4E196A1339D11C006291AA /* MainMenu.xib */; };
 		8C4E19751339D31E006291AA /* PLTabPreferenceControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E19741339D31E006291AA /* PLTabPreferenceControl.m */; };
+		8CD0CB041339FBF4002394BB /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 8CD0CB031339FBF4002394BB /* README.mdown */; };
+		8CD0CB0F1339FC62002394BB /* DataSourceDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0CB0E1339FC62002394BB /* DataSourceDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +32,11 @@
 		8C4E19671339D11C006291AA /* PLTabPreferencePanelAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLTabPreferencePanelAppDelegate.h; sourceTree = "<group>"; };
 		8C4E19681339D11C006291AA /* PLTabPreferencePanelAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLTabPreferencePanelAppDelegate.m; sourceTree = "<group>"; };
 		8C4E196B1339D11C006291AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		8C4E19731339D31E006291AA /* PLTabPreferenceControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLTabPreferenceControl.h; path = PLTabPreferenceSrc/PLTabPreferenceControl.h; sourceTree = "<group>"; };
+		8C4E19731339D31E006291AA /* PLTabPreferenceControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLTabPreferenceControl.h; path = PLTabPreferencePanel/PLTabPreferenceSrc/PLTabPreferenceControl.h; sourceTree = SOURCE_ROOT; };
 		8C4E19741339D31E006291AA /* PLTabPreferenceControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLTabPreferenceControl.m; path = PLTabPreferenceSrc/PLTabPreferenceControl.m; sourceTree = "<group>"; };
+		8CD0CB031339FBF4002394BB /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.mdown; path = PLTabPreferencePanel.xcodeproj/../README.mdown; sourceTree = "<group>"; };
+		8CD0CB0D1339FC62002394BB /* DataSourceDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceDemo.h; sourceTree = "<group>"; };
+		8CD0CB0E1339FC62002394BB /* DataSourceDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +54,7 @@
 		8C4E19461339D11B006291AA = {
 			isa = PBXGroup;
 			children = (
+				8CD0CB031339FBF4002394BB /* README.mdown */,
 				8C4E195B1339D11B006291AA /* PLTabPreferencePanel */,
 				8C4E19541339D11B006291AA /* Frameworks */,
 				8C4E19521339D11B006291AA /* Products */,
@@ -90,6 +96,8 @@
 				8C4E19681339D11C006291AA /* PLTabPreferencePanelAppDelegate.m */,
 				8C4E196A1339D11C006291AA /* MainMenu.xib */,
 				8C4E195C1339D11B006291AA /* Supporting Files */,
+				8CD0CB0D1339FC62002394BB /* DataSourceDemo.h */,
+				8CD0CB0E1339FC62002394BB /* DataSourceDemo.m */,
 			);
 			path = PLTabPreferencePanel;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 				8C4E19601339D11B006291AA /* InfoPlist.strings in Resources */,
 				8C4E19661339D11C006291AA /* Credits.rtf in Resources */,
 				8C4E196C1339D11C006291AA /* MainMenu.xib in Resources */,
+				8CD0CB041339FBF4002394BB /* README.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +190,7 @@
 				8C4E19631339D11B006291AA /* main.m in Sources */,
 				8C4E19691339D11C006291AA /* PLTabPreferencePanelAppDelegate.m in Sources */,
 				8C4E19751339D31E006291AA /* PLTabPreferenceControl.m in Sources */,
+				8CD0CB0F1339FC62002394BB /* DataSourceDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
