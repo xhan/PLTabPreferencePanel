@@ -21,12 +21,12 @@
 		8C4E19581339D11B006291AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		8C4E19591339D11B006291AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8C4E195A1339D11B006291AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8C4E195D1339D11B006291AA /* PLTabPreferencePanel-Info.plist */ = {isa = PBXFileReference; path = "PLTabPreferencePanel-Info.plist"; sourceTree = "<group>"; };
+		8C4E195D1339D11B006291AA /* PLTabPreferencePanel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PLTabPreferencePanel-Info.plist"; sourceTree = "<group>"; };
 		8C4E195F1339D11B006291AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8C4E19611339D11B006291AA /* PLTabPreferencePanel-Prefix.pch */ = {isa = PBXFileReference; path = "PLTabPreferencePanel-Prefix.pch"; sourceTree = "<group>"; };
+		8C4E19611339D11B006291AA /* PLTabPreferencePanel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PLTabPreferencePanel-Prefix.pch"; sourceTree = "<group>"; };
 		8C4E19621339D11B006291AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C4E19651339D11C006291AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		8C4E19671339D11C006291AA /* PLTabPreferencePanelAppDelegate.h */ = {isa = PBXFileReference; path = PLTabPreferencePanelAppDelegate.h; sourceTree = "<group>"; };
+		8C4E19671339D11C006291AA /* PLTabPreferencePanelAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLTabPreferencePanelAppDelegate.h; sourceTree = "<group>"; };
 		8C4E19681339D11C006291AA /* PLTabPreferencePanelAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLTabPreferencePanelAppDelegate.m; sourceTree = "<group>"; };
 		8C4E196B1339D11C006291AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
