@@ -1,0 +1,3 @@
+About PLTabPreferenceControl
+============================
+Easy to create Tab-Style(Mail.app iTunes.app) preference panel for your mac apps.
