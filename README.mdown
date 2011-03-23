@@ -1,3 +1,19 @@
 About PLTabPreferenceControl
 ============================
 Easy to create Tab-Style(Mail.app iTunes.app) preference panel for your mac apps.
+
+Usage
+=====
+
+Create an DataSource Object which implement these following methods   
+
+* \- (int)countOfPreferencePanels;
+* \- (NSString*)titleForPreferencePanelAt:(int)index;
+* \- (NSImage*)imageForPreferencePanelAt:(int)index;
+* \- (NSView*)panelViewForPreferencePanelAt:(int)index;
+
+And Bind a window and the datasource to PLTabPreferenceControl instance.
+
+> A demo inside!!
+
+

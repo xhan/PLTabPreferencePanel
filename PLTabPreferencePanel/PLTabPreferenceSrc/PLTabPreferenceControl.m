@@ -46,13 +46,11 @@
     
     NSWindow* theWin = [self window];
     [theWin setShowsToolbarButton:NO];
-    [theWin setShowsResizeIndicator:NO];
-    
-    
+//    [theWin setShowsResizeIndicator:NO];
     
     toolbar = [[NSToolbar alloc] initWithIdentifier:NSStringFromClass([self class])];
-    [toolbar setShowsBaselineSeparator:NO];
     [toolbar setAllowsUserCustomization:NO];
+    [toolbar setShowsBaselineSeparator:YES];
     [toolbar setDelegate:self];
     [[self window] setToolbar:toolbar];
     
