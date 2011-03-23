@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C4E19561339D11B006291AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4E19551339D11B006291AA /* Cocoa.framework */; };
+		8C4E19601339D11B006291AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C4E195E1339D11B006291AA /* InfoPlist.strings */; };
+		8C4E19631339D11B006291AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E19621339D11B006291AA /* main.m */; };
+		8C4E19661339D11C006291AA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8C4E19641339D11C006291AA /* Credits.rtf */; };
+		8C4E19691339D11C006291AA /* PLTabPreferencePanelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4E19681339D11C006291AA /* PLTabPreferencePanelAppDelegate.m */; };
+		8C4E196C1339D11C006291AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C4E196A1339D11C006291AA /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C4E19511339D11B006291AA /* PLTabPreferencePanel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLTabPreferencePanel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4E19551339D11B006291AA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8C4E19581339D11B006291AA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8C4E19591339D11B006291AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8C4E195A1339D11B006291AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C4E195D1339D11B006291AA /* PLTabPreferencePanel-Info.plist */ = {isa = PBXFileReference; path = "PLTabPreferencePanel-Info.plist"; sourceTree = "<group>"; };
+		8C4E195F1339D11B006291AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C4E19611339D11B006291AA /* PLTabPreferencePanel-Prefix.pch */ = {isa = PBXFileReference; path = "PLTabPreferencePanel-Prefix.pch"; sourceTree = "<group>"; };
+		8C4E19621339D11B006291AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C4E19651339D11C006291AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8C4E19671339D11C006291AA /* PLTabPreferencePanelAppDelegate.h */ = {isa = PBXFileReference; path = PLTabPreferencePanelAppDelegate.h; sourceTree = "<group>"; };
+		8C4E19681339D11C006291AA /* PLTabPreferencePanelAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLTabPreferencePanelAppDelegate.m; sourceTree = "<group>"; };
+		8C4E196B1339D11C006291AA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C4E194E1339D11B006291AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4E19561339D11B006291AA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C4E19461339D11B006291AA = {
+			isa = PBXGroup;
+			children = (
+				8C4E195B1339D11B006291AA /* PLTabPreferencePanel */,
+				8C4E19541339D11B006291AA /* Frameworks */,
+				8C4E19521339D11B006291AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C4E19521339D11B006291AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E19511339D11B006291AA /* PLTabPreferencePanel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C4E19541339D11B006291AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E19551339D11B006291AA /* Cocoa.framework */,
+				8C4E19571339D11B006291AA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C4E19571339D11B006291AA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E19581339D11B006291AA /* AppKit.framework */,
+				8C4E19591339D11B006291AA /* CoreData.framework */,
+				8C4E195A1339D11B006291AA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8C4E195B1339D11B006291AA /* PLTabPreferencePanel */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E19671339D11C006291AA /* PLTabPreferencePanelAppDelegate.h */,
+				8C4E19681339D11C006291AA /* PLTabPreferencePanelAppDelegate.m */,
+				8C4E196A1339D11C006291AA /* MainMenu.xib */,
+				8C4E195C1339D11B006291AA /* Supporting Files */,
+			);
+			path = PLTabPreferencePanel;
+			sourceTree = "<group>";
+		};
+		8C4E195C1339D11B006291AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C4E195D1339D11B006291AA /* PLTabPreferencePanel-Info.plist */,
+				8C4E195E1339D11B006291AA /* InfoPlist.strings */,
+				8C4E19611339D11B006291AA /* PLTabPreferencePanel-Prefix.pch */,
+				8C4E19621339D11B006291AA /* main.m */,
+				8C4E19641339D11C006291AA /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C4E19501339D11B006291AA /* PLTabPreferencePanel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C4E196F1339D11C006291AA /* Build configuration list for PBXNativeTarget "PLTabPreferencePanel" */;
+			buildPhases = (
+				8C4E194D1339D11B006291AA /* Sources */,
+				8C4E194E1339D11B006291AA /* Frameworks */,
+				8C4E194F1339D11B006291AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PLTabPreferencePanel;
+			productName = PLTabPreferencePanel;
+			productReference = 8C4E19511339D11B006291AA /* PLTabPreferencePanel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C4E19481339D11B006291AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Baidu.com;
+			};
+			buildConfigurationList = 8C4E194B1339D11B006291AA /* Build configuration list for PBXProject "PLTabPreferencePanel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8C4E19461339D11B006291AA;
+			productRefGroup = 8C4E19521339D11B006291AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C4E19501339D11B006291AA /* PLTabPreferencePanel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C4E194F1339D11B006291AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4E19601339D11B006291AA /* InfoPlist.strings in Resources */,
+				8C4E19661339D11C006291AA /* Credits.rtf in Resources */,
+				8C4E196C1339D11C006291AA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C4E194D1339D11B006291AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C4E19631339D11B006291AA /* main.m in Sources */,
+				8C4E19691339D11C006291AA /* PLTabPreferencePanelAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8C4E195E1339D11B006291AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C4E195F1339D11B006291AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C4E19641339D11C006291AA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C4E19651339D11C006291AA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8C4E196A1339D11C006291AA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C4E196B1339D11C006291AA /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C4E196D1339D11C006291AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8C4E196E1339D11C006291AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8C4E19701339D11C006291AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PLTabPreferencePanel/PLTabPreferencePanel-Prefix.pch";
+				INFOPLIST_FILE = "PLTabPreferencePanel/PLTabPreferencePanel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C4E19711339D11C006291AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PLTabPreferencePanel/PLTabPreferencePanel-Prefix.pch";
+				INFOPLIST_FILE = "PLTabPreferencePanel/PLTabPreferencePanel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C4E194B1339D11B006291AA /* Build configuration list for PBXProject "PLTabPreferencePanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4E196D1339D11C006291AA /* Debug */,
+				8C4E196E1339D11C006291AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C4E196F1339D11C006291AA /* Build configuration list for PBXNativeTarget "PLTabPreferencePanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C4E19701339D11C006291AA /* Debug */,
+				8C4E19711339D11C006291AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C4E19481339D11B006291AA /* Project object */;
+}
