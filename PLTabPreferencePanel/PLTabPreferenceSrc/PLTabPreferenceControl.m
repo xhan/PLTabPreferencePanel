@@ -68,6 +68,11 @@
     
 	if (viewToShow && ([theWin contentView] != viewToShow)) {
 		
+        //will appear
+        if ([delegate respondsToSelector:@selector(prefViewWillAppear:atIndex:)]) {
+            [delegate prefViewWillAppear:viewToShow atIndex:[sender tag]];
+        }
+        
 		[toolbar setSelectedItemIdentifier:[sender itemIdentifier]];
 		
 		NSRect newFrame = [theWin frameRectForContentRect:[viewToShow bounds]];
@@ -80,7 +85,11 @@
 		[theWin setFrame:newFrame display:YES animate:YES];
         
 		[theWin setTitle:[sender label]];
-		
+
+        //did appear
+        if ([delegate respondsToSelector:@selector(prefViewDidAppear:atIndex:)]) {
+            [delegate prefViewDidAppear:viewToShow atIndex:[sender tag]];
+        }
 	}
 }
 

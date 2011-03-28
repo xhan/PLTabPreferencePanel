@@ -38,5 +38,6 @@
 
 @optional
 - (NSString*)identifyForPreferencePanelAt:(int)index;
-
+- (void)prefViewWillAppear:(NSView*)view atIndex:(NSInteger)index;
+- (void)prefViewDidAppear:(NSView*)view atIndex:(NSInteger)index;
 @end
