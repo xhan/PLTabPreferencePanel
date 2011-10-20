@@ -34,10 +34,8 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    NSLog(@"window loaded");
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-    
-    //this method only will be called if window is loaded by it's nib file
+//    NSLog(@"window loaded");
+
 }
 
 
